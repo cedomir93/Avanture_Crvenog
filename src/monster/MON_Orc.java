@@ -4,9 +4,13 @@ import entity.Entity;
 import java.util.Random;
 import main.GamePanel;
 import object.OBJ_Coin_Bronze;
+import object.OBJ_Coin_Gold;
+import object.OBJ_Coin_Silver;
 import object.OBJ_Heart;
 import object.OBJ_ManaCrystal;
+import object.OBJ_Potion_Red;
 import object.OBJ_Rock;
+import object.OBJ_Sword_Normal;
 
 public class MON_Orc extends Entity {
 
@@ -115,14 +119,29 @@ public class MON_Orc extends Entity {
 		int i = new Random().nextInt(100)+1;
 		
 		// SET THE MONSTER DROP
-		if (i < 50) {
-			dropItem(new OBJ_Coin_Bronze(gp));
+		if (i < 40) {
+			dropItem(new OBJ_Coin_Silver(gp)); 
 		}
+			
+		if (i >= 40 && i < 50) {
+			dropItem(new OBJ_Coin_Gold(gp)); 
+		}
+			
 		if (i >= 50 && i < 75) {
 			dropItem(new OBJ_Heart(gp));
 		}
-		if (i >= 75 && i < 100) {
-			dropItem(new OBJ_ManaCrystal(gp));
+			 
+		if (i >= 75 && i < 90) {
+			dropItem((Entity)new OBJ_Potion_Red(gp));
 		}
+			 
+		if (i >= 90 && i < 95) {
+			dropItem((Entity)new OBJ_Sword_Normal(gp));
+		}
+			 
+		if (i >= 95) {
+			dropItem((Entity)new OBJ_Potion_Red(gp)); 
+		}
+			
 	}
 }

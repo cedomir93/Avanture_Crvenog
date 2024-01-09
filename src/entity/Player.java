@@ -76,7 +76,7 @@ public class Player extends Entity {
 		dexterity = 1;
 		exp = 0;
 		nextLevelExp = 5;
-		coin = 500;
+		coin = 0;
 		currentWeapon = new OBJ_Sword_Normal(gp);
 		currentShield = new OBJ_Shield_Wood(gp);
 		currentLight = null;
@@ -126,10 +126,6 @@ public class Player extends Entity {
 		invenotry.clear();
 		invenotry.add(currentWeapon);
 		invenotry.add(currentShield);
-		invenotry.add(new OBJ_Key(gp));
-		//test
-//		invenotry.add(new OBJ_Pickaxe(gp));
-//		invenotry.add(new OBJ_Lantern(gp));
 	}
 	public int getAttack() {
 		attackArea = currentWeapon.attackArea;

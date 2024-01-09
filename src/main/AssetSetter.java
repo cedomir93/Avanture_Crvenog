@@ -38,7 +38,7 @@ public class AssetSetter {
 		gp.obj[mapNum][i] = new OBJ_Chest(gp);
 		gp.obj[mapNum][i].setLoot(new OBJ_Key(gp));
 		gp.obj[mapNum][i].worldX = gp.tileSize*30;
-		gp.obj[mapNum][i].worldY = gp.tileSize*28;
+		gp.obj[mapNum][i].worldY = gp.tileSize*29;
 		i++;
 		
 		gp.obj[mapNum][i] = new OBJ_Chest(gp);
@@ -60,12 +60,6 @@ public class AssetSetter {
 		gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
 		gp.obj[mapNum][i].worldX = gp.tileSize*40;
 		gp.obj[mapNum][i].worldY = gp.tileSize*41;
-		i++;
-		
-		gp.obj[mapNum][i] = new OBJ_Chest(gp);
-		gp.obj[mapNum][i].setLoot(new OBJ_Pickaxe(gp));
-		gp.obj[mapNum][i].worldX = gp.tileSize*20;
-		gp.obj[mapNum][i].worldY = gp.tileSize*35;
 		i++;
 		
 		gp.obj[mapNum][i] = new OBJ_Chest(gp);
@@ -204,13 +198,28 @@ public class AssetSetter {
 		i++;
 		
 		gp.monster[mapNum][i] = new MON_Bat(gp);
-		gp.monster[mapNum][i].worldX = gp.tileSize*40;
-		gp.monster[mapNum][i].worldY = gp.tileSize*24;
+		gp.monster[mapNum][i].worldX = gp.tileSize*27;
+		gp.monster[mapNum][i].worldY = gp.tileSize*11;
 		i++;
 		
 		gp.monster[mapNum][i] = new MON_Bat(gp);
 		gp.monster[mapNum][i].worldX = gp.tileSize*10;
 		gp.monster[mapNum][i].worldY = gp.tileSize*19;
+		i++;
+		
+		gp.monster[mapNum][i] = new MON_Orc(gp);
+		gp.monster[mapNum][i].worldX = gp.tileSize*17;
+		gp.monster[mapNum][i].worldY = gp.tileSize*37;
+		i++;
+		
+		gp.monster[mapNum][i] = new MON_Orc(gp);
+		gp.monster[mapNum][i].worldX = gp.tileSize*38;
+		gp.monster[mapNum][i].worldY = gp.tileSize*14;
+		i++;
+		
+		gp.monster[mapNum][i] = new MON_Orc(gp);
+		gp.monster[mapNum][i].worldX = gp.tileSize*18;
+		gp.monster[mapNum][i].worldY = gp.tileSize*8;
 		i++;
 		
 		mapNum = 3;
@@ -244,8 +253,30 @@ public class AssetSetter {
 		gp.iTile[mapNum][i] = new IT_DryTree(gp, 33, 12); i++;
 		
 		// TO THE HUT
-		
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 13, 40); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 14, 40); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 15, 40); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 16, 40); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 17, 40); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 18, 40); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 10, 41); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 11, 41); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 12, 41); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 13, 41); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 10, 40); i++;
 		// TO THE CHEST
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 25, 27); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 26, 27); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 27, 27); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 27, 28); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 27, 29); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 27, 30); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 27, 31); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 27, 31); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 28, 31); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 29, 31); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 30, 31); i++;
+		gp.iTile[mapNum][i] = new IT_DryTree(gp, 30, 30); i++;
 		
 		// DUNGEON INSIDE
 		mapNum = 2;

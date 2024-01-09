@@ -8,6 +8,7 @@ import java.util.Random;
 import main.GamePanel;
 import monster.MON_RedSlime;
 import object.OBJ_Coin_Bronze;
+import object.OBJ_Coin_Silver;
 import object.OBJ_Heart;
 import object.OBJ_ManaCrystal;
 import object.OBJ_Potion_Red;
@@ -88,14 +89,24 @@ public class MON_RedSlime extends Entity{
 		int i = new Random().nextInt(100)+1;
 		
 		// SET THE MONSTER DROP
-		if (i < 50) {
-			dropItem(new OBJ_Coin_Bronze(gp));
+		if (i < 25) {
+			dropItem(new OBJ_Coin_Bronze(gp)); 
 		}
-		if (i >= 50 && i < 75) {
+			
+		if (i >= 25 && i < 60) {
+			dropItem(new OBJ_Coin_Silver(gp)); 
+		}
+			
+		if (i >= 60 && i < 80) {
 			dropItem(new OBJ_Heart(gp));
 		}
-		if (i >= 75 && i < 100) {
-			dropItem(new OBJ_ManaCrystal(gp));
+			 
+		if (i >= 80 && i < 95) {
+			dropItem(new OBJ_Potion_Red(gp)); 
 		}
+			
+		if (i >= 95 && i < 100) {
+			dropItem(new OBJ_Shield_Wood(gp));
+		} 
 	}
 }
